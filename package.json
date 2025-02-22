@@ -1,0 +1,11 @@
+{
+  "name": "hello-openshift",
+  "version": "1.0.0",
+  "description": "Simple Hello World app for OpenShift",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Your Name",
+  "license": "MIT"
+}
