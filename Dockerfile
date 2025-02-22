@@ -10,8 +10,10 @@ COPY . .
 
 EXPOSE 8080
 
-# Download and install oc client
-RUN wget https://mirror.openshift.com/pub/openshift-v4/clients/ocp/latest/openshift-client-linux.tar.gz && \
+# Install oc client
+RUN apk update && \
+    apk add --no-cache wget tar openshift-client && \
+    wget https://mirror.openshift.com/pub/openshift-v4/clients/ocp/latest/openshift-client-linux.tar.gz && \
     tar -zxvf openshift-client-linux.tar.gz && \
     mv oc /usr/local/bin/ && \
     chmod +x /usr/local/bin/oc && \
